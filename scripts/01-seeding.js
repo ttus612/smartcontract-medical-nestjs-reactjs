@@ -9,7 +9,7 @@ async function main() {
     "MedicalRecord",
     config[chainId].MedicalRecord.address
   );
-  console.log(`Medical smart contract is fetched at address ${medical.target}`);
+  console.log(`Medical smart contract is fetched at address ${medical.address}`);
   let transactionResponse;
   const user1 = accounts[0];
   transactionResponse = await medical

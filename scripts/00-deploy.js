@@ -5,8 +5,9 @@ async function main() {
   const accounts = await ethers.getSigners();
   const medical = await Medical.connect(accounts[0]).deploy();
   // Replace deployed() with waitForDeployment() for ethers.js v6+
-  await medical.waitForDeployment();
-  console.log(`Medical is deployed in address ${medical.target}`);
+  // await medical.waitForDeployment();
+  await medical.deployed();
+  console.log(`Medical is deployed in address ${medical.address}`);
 }
 main()
   .then(() => process.exit(0))
