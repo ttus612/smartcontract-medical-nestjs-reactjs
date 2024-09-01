@@ -2,7 +2,7 @@ import "./App.css";
 import { useEffect } from "react";
 import { loadAllData, loadMedical, loadNetwork, loadProvider, subscribeToEvent } from "./store/interactions";
 import { useDispatch } from "react-redux";
-import { Data, Form, Navbar, Option } from "./components";
+import { Alert, Data, Form, Navbar, Option } from "./components";
 import config from "./config.json";
 import { Route, Routes } from "react-router-dom";
 
@@ -34,6 +34,7 @@ function App() {
         <Route path="/" exact element={<Form />} />
         <Route path="/Data" exact element={<Data />} />
       </Routes>
+      <Alert />
     </div>
   );
 }
